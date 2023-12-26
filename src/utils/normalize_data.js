@@ -2,7 +2,7 @@ export default function normalizeData(data) {
   const characters = data.results;
 
   if (characters.length === 0) {
-    return null;
+    return [];
   }
 
   return characters.map((character) => {
