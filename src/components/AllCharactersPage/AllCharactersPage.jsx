@@ -3,29 +3,27 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   getCharacters,
   characters,
-  favoriteCharacters,
   addFavoriteCharacter,
   removeFavoriteCharacter,
   deleteCharacter,
 } from "../../redux/slice";
 import Card from "../Card/Card";
+import "./allCharactersPage.scss";
 
 const CharactersPage = () => {
   const dispatch = useDispatch();
   const allCharacters = useSelector(characters);
-  const favorites = useSelector(favoriteCharacters);
-  console.log(allCharacters)
 
   useEffect(() => {
     dispatch(getCharacters());
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="characters-page">
       {allCharacters.characters.length > 0 ? (
         <div>
-          <h1>All Characters</h1>
-          <ul>
+          <h1 className="characters-page__title">All Characters</h1>
+          <ul className="characters-page__list">
             {allCharacters.characters.map((character) => (
               <Card
                 key={character.id}
@@ -43,7 +41,7 @@ const CharactersPage = () => {
           </ul>
         </div>
       ) : (
-        <p>Loading...</p>
+        <p className="characters-page__loading">Loading...</p>
       )}
     </div>
   );
