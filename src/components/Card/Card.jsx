@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./card.scss";
 
 function Card({ id, name, image, species, isFavorite, onDelete, onFavorite }) {
@@ -35,5 +36,15 @@ function Card({ id, name, image, species, isFavorite, onDelete, onFavorite }) {
     </div>
   );
 }
+
+Card.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  species: PropTypes.string.isRequired,
+  isFavorite: PropTypes.bool.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onFavorite: PropTypes.func.isRequired,
+};
 
 export default Card;

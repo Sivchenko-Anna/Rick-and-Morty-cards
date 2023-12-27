@@ -51,7 +51,6 @@ const charactersSlice = createSlice({
     },
     toggleFavoriteCharacters: (state) => {
       state.isFavoriteView = !state.isFavoriteView;
-      console.log("toggle")
     },
   },
   extraReducers: (builder) => {
