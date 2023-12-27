@@ -1,15 +1,22 @@
 .characters-page {
   text-align: center;
-  &__title {
-    font-size: 4vw;
+  &__toggle-btn {
+    font-size: 2vw;
     font-weight: 600;
-    margin-bottom: 1.5%;
+    padding: 1%;
+    margin: 1.5% 0 2%;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    &:hover {
+      font-weight: 700;
+    }
   }
   &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 40px;
+    gap: 50px;
     list-style: none;
     padding: 0;
   }

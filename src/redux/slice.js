@@ -4,6 +4,7 @@ import getData from "../api/get_data";
 const initialState = {
   characters: [],
   favoriteCharacters: [],
+  isFavoriteView: false,
 };
 
 const fetchCharacters = createAsyncThunk(
@@ -48,6 +49,10 @@ const charactersSlice = createSlice({
         (char) => char.id !== id
       );
     },
+    toggleFavoriteCharacters: (state) => {
+      state.isFavoriteView = !state.isFavoriteView;
+      console.log("toggle")
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchCharacters.fulfilled, (state, action) => {
@@ -66,12 +71,11 @@ export const getCharacters = () => {
   };
 };
 
-export const characters = (state) => state.characters;
-export const favoriteCharacters = (state) => state.favoriteCharacters;
 export const {
   addFavoriteCharacter,
   removeFavoriteCharacter,
   deleteCharacter,
+  toggleFavoriteCharacters,
 } = charactersSlice.actions;
 
 export const charactersReducer = charactersSlice.reducer;

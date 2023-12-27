@@ -5,7 +5,7 @@ function Card({ id, name, image, species, isFavorite, onDelete, onFavorite }) {
     <div className="card">
       <img src={image} alt={name} className="card__image" />
       <div className="card__content">
-        <h2 className="card__name">Name: {name}</h2>
+        <h2 className="card__name">{name}</h2>
         <p className="card__species">Species: {species}</p>
         <div className="card__buttons">
           <button
