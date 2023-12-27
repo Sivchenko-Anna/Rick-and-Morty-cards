@@ -1,8 +1,43 @@
-# React + Vite
+# Rick-and-Morty-cards
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Проект "Rick-and-Morty-cards" представляет собой адаптивный SPA со списком карточек, на каждой из которых выводится картинка и информация о героях вселенной Рика и Морти, полученная из публичного api.
 
-Currently, two official plugins are available:
+Посмотреть работу (Демо) - [Rick-and-Morty-cards](https://sivchenko-anna.github.io/Rick-and-Morty-cards/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Технологии и инструменты
+- React
+- Redux, RTK
+- SCSS
+- Библиотеки axios и prop-types
+
+## Функциональность приложения
+
+- **Хранение данных в сторе** - Пришедшие данные хранятся в хранилище (store), что позволяет удобно управлять и обрабатывать информацию в проекте.
+- **Возможность добавления/удаления карточки в избранное** -  На карточке присутствует иконка лайка. При нажатии на иконку, устанавливается или снимается лайк для соответствующей карточки. 
+- **Возможность удаления карточки** -  На карточке присутствует иконка удаления. При нажатии на иконку, соответствующая карточка удаляется из списка или из хранилища данных.
+- **Кнопка фильтра** - При нажатии на кнопку, отображаются только залайканые карточки, то есть карточки, для которых установлен лайк. Повторное нажатие на кнопку отменяет фильтрацию и отображает все карточки.
+
+## Примеры использования 
+![Снимок экрана (95)](https://github.com/Sivchenko-Anna/Rick-and-Morty-cards/assets/103916590/0a88345a-9790-4de0-9927-d6d142ff63e0)
+
+
+## Запуск проекта
+
+Если вы хотите запустить проект локально, выполните следующие шаги:
+1. Убедитесь, что у вас установлен Node.js
+2. Склонируйте репозиторий на свой локальный компьютер
+```sh
+git clone https://github.com/Sivchenko-Anna/Rick-and-Morty-cards.git
+```
+3. Перейдите в директорию проекта 
+```sh
+cd Rick-and-Morty-cards
+```
+4. Установите зависимости 
+```sh
+npm install
+```
+5. Запустите проект
+```sh
+npm run dev
+```
