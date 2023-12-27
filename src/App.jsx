@@ -1,6 +1,7 @@
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import "./App.scss";
+import CharactersPage from "./components/AllCharactersPage/AllCharactersPage";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <p className="app__subtitle">
           You can like your favorite characters and remove unloved ones!
         </p>
+        <CharactersPage/>
       </div>
     </Provider>
   );
